@@ -11,7 +11,7 @@ axios.defaults.baseURL = 'https://pokemonserver-production.up.railway.app/';
 
 const root = document.getElementById('root');
 
-/* const rootElement = ReactDOM.createRoot(root);
+const rootElement = ReactDOM.createRoot(root);
 
 rootElement.render(
   <Provider store={store}>
@@ -19,13 +19,13 @@ rootElement.render(
       <App/>
     </BrowserRouter>
   </Provider>,    
-); */
+);
 
-ReactDOM.render(
+/* ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </Provider>,
   root
-);
+); */
