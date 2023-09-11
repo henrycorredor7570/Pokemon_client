@@ -1,12 +1,10 @@
 import axios from "axios";
 import { GET_POKEMONS, GET_POKEMON_BY_NAME, GET_TYPES_POKEMONS, CREATE_POKEMON, ORDER_ALPHABET, ORDER_ATTACK, FILTER_TYPE, FILTER_POKE_CREATED } from "./types_actions";
 
-const URL = "http://localhost:3001/pokemon/";
-
 export const getPokemons = () => {
     return async function(dispatch) {
         try {
-            const info = await axios.get(`${URL}`);
+            const info = await axios.get(`/pokemon`);
             const pokemons = info.data;
             if(!pokemons.length) throw Error("No hay Pokemones Disponibles");
             return dispatch({// se envia la accion al reducer
@@ -22,7 +20,7 @@ export const getPokemons = () => {
 export const getPokemonByName = (name) => {
     return async function(dispatch) {
         try {
-            const info = await axios.get(`${URL}?name=${name}`);
+            const info = await axios.get(`/pokemon/?name=${name}`);
             const pokemonName = info.data;
             if(!pokemonName.length) throw Error(`No hay Pokemones asociados con el nombre: ${name}`);
             return dispatch({
@@ -38,7 +36,7 @@ export const getPokemonByName = (name) => {
 export const getTypesPokemon = () => {
     return async function(dispatch) {
         try {
-            const info = await axios.get(`http://localhost:3001/types`);
+            const info = await axios.get(`/types`);
             const typesPokemon = info.data
             return dispatch({
                 type: GET_TYPES_POKEMONS,
@@ -53,7 +51,7 @@ export const getTypesPokemon = () => {
 export const createPokemon = (infoPokemon) => {
     return async function(dispatch) {
         try {
-            const info = await axios.post(`${URL}`, infoPokemon)
+            const info = await axios.post(`/pokemon`, infoPokemon)
             const pokemonCreated = info.data;
             return dispatch({
                 type: CREATE_POKEMON,

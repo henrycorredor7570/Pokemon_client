@@ -4,6 +4,11 @@ import store from "./redux/store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from './App';
+import axios from "axios";
+
+// axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'https://pokemonserver-production.up.railway.app/';
+
 
 ReactDOM.render(
   <Provider store={store}>{/* me sirve para que este conectado con la aplicacion de react (conecta react con el store*/}
