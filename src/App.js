@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        {/* {location.pathname !== "/" && <NavBar/>} */}
+        {/* {location.pathname !== "/" && <NavBar/>} .*/}
         <Route path="/home" render={() => <Home/>}/>
         <Route path="/create" render={() => <Form/>}/>
         <Route exact path="/" render={() => <Landing/>}/>
