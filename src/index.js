@@ -20,12 +20,3 @@ rootElement.render(
     </BrowserRouter>
   </Provider>,    
 );
-
-/* ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>,
-  root
-); */
