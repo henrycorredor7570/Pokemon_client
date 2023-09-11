@@ -1,0 +1,17 @@
+.containerCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    flex-wrap: wrap ;/* para que me envie abajo las cartas que sobran a lo ancho  */
+    gap: 2em; /* las tarjetas se separen un poquito */
+    margin-top: -20px;
+}
+
+.link{
+    text-decoration: none;
+}
