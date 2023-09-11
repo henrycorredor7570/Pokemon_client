@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
@@ -10,12 +10,22 @@ import axios from "axios";
 axios.defaults.baseURL = 'https://pokemonserver-production.up.railway.app/';
 
 const root = document.getElementById('root');
-const rootElement = ReactDOM.createRoot(root);
+
+/* const rootElement = ReactDOM.createRoot(root);
 
 rootElement.render(
-  <Provider store={store}>{/* me sirve para que este conectado con la aplicacion de react (conecta react con el store*/}
+  <Provider store={store}>
     <BrowserRouter>
       <App/>
     </BrowserRouter>
   </Provider>,    
+); */
+
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  root
 );
