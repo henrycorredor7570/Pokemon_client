@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import validationInputs from "../../utils/validations";
 import { createPokemon, getTypesPokemon } from "../../redux/actions";
