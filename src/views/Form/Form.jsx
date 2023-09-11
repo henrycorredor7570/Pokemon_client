@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import validationInputs from "../../utils/validations";
 import { createPokemon, getTypesPokemon } from "../../redux/actions";
 import styles from "./Form.module.css";
 
 const Form = () => {
-    const history = useHistory(); // para acceder al historial de navegacion
+    // const history = useHistory(); // para acceder al historial de navegacion
 
     const dispatch = useDispatch();
 
@@ -57,7 +57,7 @@ const Form = () => {
             type:[],
         })
         alert("¡POKEMON CREATED!")
-        history.push("/home");// se redirige al usuario a la pagina de inicio
+        // history.push("/home");// se redirige al usuario a la pagina de inicio
     }
 
     const handleTypes = (event) => { // funcion para el manejo de tipos de pokemons
