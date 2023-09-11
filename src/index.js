@@ -7,7 +7,7 @@ import App from './App';
 import axios from "axios";
 
 // axios.defaults.baseURL = 'http://localhost:3001';
-axios.defaults.baseURL = 'https://pokemonserver-production.up.railway.app/';
+axios.defaults.baseURL = 'https://pokemonserver-production.up.railway.app';
 
 const root = document.getElementById('root');
 
