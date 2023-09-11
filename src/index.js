@@ -9,8 +9,10 @@ import axios from "axios";
 // axios.defaults.baseURL = 'http://localhost:3001';
 axios.defaults.baseURL = 'https://pokemonserver-production.up.railway.app/';
 
+const root = document.getElementById('root');
+const rootElement = ReactDOM.createRoot(root);
 
-ReactDOM.render(
+rootElement(
   <Provider store={store}>{/* me sirve para que este conectado con la aplicacion de react (conecta react con el store*/}
     <BrowserRouter>
       <App/>
