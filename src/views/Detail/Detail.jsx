@@ -9,7 +9,7 @@ const Detail = () => {
     const [details, setDetails] = useState({});
 
     useEffect(()=> {
-        axios(`/pokemon/${id}`)
+        axios(`http://localhost:3001/pokemon/${id}`)
         .then(response => response.data)
         .then((data) => {
             if(data.name){
@@ -19,7 +19,7 @@ const Detail = () => {
             }
         })
         return setDetails({});//se restablece el estado a un objeto vacio, 
-    }, [id]);//el effect se ejecuta cada vez que cambie el valor del id.
+    }, [id]);//el effect se ejecuta cada vez que cambie el valor del id
 
     return(
         <div className={styles.containerDetails}>

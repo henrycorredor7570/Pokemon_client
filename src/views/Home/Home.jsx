@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavBar } from "../imports";
+import NavBar from "../../components/NavBar/NavBar";
 import Cards from "../../components/Cards/Cards";
 import { getPokemons, orderAlphabet, orderAttack, filterType, getTypesPokemon, filterPokeCreated } from "../../redux/actions";
 import styles from "./Home.module.css";
