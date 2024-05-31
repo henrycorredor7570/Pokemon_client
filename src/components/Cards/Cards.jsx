@@ -7,7 +7,7 @@ import style from "./Cards.module.css";
 
 const Cards = () => {
 
-	const pokemons = useSelector((state) => state.pokemons);
+	const pokemons = useSelector((state) => state.pokemons); 
     
     const [currentPage, setCurrentPage] = useState(1);
     const pokemonsPerPage = 12;
