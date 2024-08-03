@@ -10,7 +10,7 @@ const Card = ({pokemon}) => {
                 <h2>{pokemon.name}</h2>
                 <p>Types:</p>
             </div>
-            <div className={styles.cardTypes}>
+            <div className={styles.cardTypes}> 
                 {pokemon.Types?.map((type) => <div className={styles.type}>{type}</div>)}
             </div>
         </div>
