@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 const Card = ({pokemon}) => {
     return(
         <div className={styles.card}>
-            <div className={styles.cardImage}>
+            <div className={styles.cardImage}> 
                 <img src={pokemon.image} alt={pokemon.name}/>
             </div>  
             <div className={styles.cardText}>   
